@@ -12,8 +12,9 @@ export const todos = (state = [], action) => {
         case 'TOGGLE_TODO': 
             return state.map(todo => {
                 if (action.id === todo.id) {
-                    todo.completed = !todo.completed
+                    todo.completed = !todo.completed;
                 }
+                console.log(todo)
                 return todo;
             });
         default: 

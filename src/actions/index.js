@@ -6,4 +6,4 @@ export const addToDo = todo => ({
 export const toggleToDo = id => ({
     type: 'TOGGLE_TODO',
     id
-}) 
+}); 

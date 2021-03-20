@@ -22,11 +22,17 @@ class AddTodoForm extends Component {
     return (
       <section>
         <form onSubmit={this.submitForm}>
-          <input
-            value={this.state.todo}
-            placeholder="Add A Todo"
-            onChange={this.handleChange} />
-          <button>Add Todo</button>
+          
+            <input
+              value={this.state.todo}
+              placeholder="Add A Todo"
+              onChange={this.handleChange} />
+            <button>Add Todo</button>
+          <div className='button-container'>
+          <button>Show All</button>
+          <button>Show Active</button>
+          <button>Show Completed</button>
+          </div>
         </form>
       </section>
     )

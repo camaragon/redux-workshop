@@ -9,6 +9,18 @@ export const todos = (state = [], action) => {
                     completed: false 
                 }
             ];
+        case 'TOGGLE_TODO': 
+            if (action.todo.completed === false) {
+                return [
+                    ...state,
+                    action.todo.completed = true
+                ]
+            } else {
+                return [
+                    ...state,
+                    action.todo.completed = false
+                ]
+            }
         default: 
         return state;
     }

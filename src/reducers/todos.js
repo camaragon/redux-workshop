@@ -10,18 +10,13 @@ export const todos = (state = [], action) => {
                 }
             ];
         case 'TOGGLE_TODO': 
-            if (action.todo.completed === false) {
-                return [
-                    ...state,
-                    action.todo.completed = true
-                ]
-            } else {
-                return [
-                    ...state,
-                    action.todo.completed = false
-                ]
-            }
+            return state.map(todo => {
+                if (action.id === todo.id) {
+                    todo.completed = !todo.completed
+                }
+                return todo;
+            });
         default: 
-        return state;
+            return state;
     }
 }
